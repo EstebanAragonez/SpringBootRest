@@ -20,8 +20,9 @@ public class Maker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "nombre")
     private String name;
 
+    @OneToMany(mappedBy = "maker",cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Product> productList = new ArrayList<>();
 }

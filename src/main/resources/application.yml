@@ -3,13 +3,13 @@ spring:
     name: SpringBootRest
   datasource:
     url: jdbc:mysql://localhost:3306/develop
-    username: admin
+    username: root
     password: brigadier
 
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
